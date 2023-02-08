@@ -21,13 +21,13 @@ end architecture dataflow;
 
    | **c** | **b** |**a** | **f_ORIG** | **f_(N)AND** | **f_(N)OR** |
    | :-: | :-: | :-: | :-: | :-: | :-: |
-   | 0 | 0 | 0 | 0 | 1 | 1 |
-   | 0 | 0 | 1 | 1 | 1 | 0 |
-   | 0 | 1 | 0 | 0 | 1 | 0 |
+   | 0 | 0 | 0 | 0 | 0 | 0 |
+   | 0 | 0 | 1 | 1 | 1 | 1 |
+   | 0 | 1 | 0 | 0 | 0 | 0 |
    | 0 | 1 | 1 | 0 | 0 | 0 |
-   | 1 | 0 | 0 | 0 | 1 | 1 |
-   | 1 | 0 | 1 | 1 | 1 | 0 |
-   | 1 | 1 | 0 | 0 | 1 | 0 |
+   | 1 | 0 | 0 | 0 | 0 | 0 |
+   | 1 | 0 | 1 | 1 | 1 | 1 |
+   | 1 | 1 | 0 | 0 | 0 | 0 |
    | 1 | 1 | 1 | 0 | 0 | 0 |
 
 ### Distributive laws
@@ -38,4 +38,4 @@ end architecture dataflow;
 
 2. Link to your public EDA Playground example:
 
-   [https://www.edaplayground.com/...](https://www.edaplayground.com/...)
+   [https://www.edaplayground.com/...](https://www.edaplayground.com/x/fUHx)
