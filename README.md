@@ -1,1 +1,2 @@
-# digital-electronics-1
+# Digital electronics I
+## BPC-DE1
