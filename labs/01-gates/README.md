@@ -12,8 +12,8 @@
 architecture dataflow of gates is
 begin
     f_orig_o <= (not(b_i) and a_i) or (c_i and not(b_i or not(a_i)));
-    f_nand_o <= not(b_i) or not(a_i); -- MODIFIED FUNCTION
-    f_nor_o  <= not(b_i) and not(a_i);  -- MODIFIED FUNCTION
+    f_nand_o <= (not(b_i) nand a_i) nand (not(c_i and (not(b_i) and a_i))); -- MODIFIED FUNCTION
+    f_nor_o  <= (b_i nor not(a_i)) or (not(not(c_i) or (b_i or not(a_i)))); -- MODIFIED FUNCTION
 end architecture dataflow;
 ```
 
@@ -21,13 +21,13 @@ end architecture dataflow;
 
    | **c** | **b** |**a** | **f_ORIG** | **f_(N)AND** | **f_(N)OR** |
    | :-: | :-: | :-: | :-: | :-: | :-: |
-   | 0 | 0 | 0 | 0 | 1 | 1 |
-   | 0 | 0 | 1 | 1 | 1 | 0 |
-   | 0 | 1 | 0 | 0 | 1 | 0 |
+   | 0 | 0 | 0 | 0 | 0 | 0 |
+   | 0 | 0 | 1 | 1 | 1 | 1 |
+   | 0 | 1 | 0 | 0 | 0 | 0 |
    | 0 | 1 | 1 | 0 | 0 | 0 |
-   | 1 | 0 | 0 | 0 | 1 | 1 |
-   | 1 | 0 | 1 | 1 | 1 | 0 |
-   | 1 | 1 | 0 | 0 | 1 | 0 |
+   | 1 | 0 | 0 | 0 | 0 | 0 |
+   | 1 | 0 | 1 | 1 | 1 | 1 |
+   | 1 | 1 | 0 | 0 | 0 | 0 |
    | 1 | 1 | 1 | 0 | 0 | 0 |
 
 ### Distributive laws
@@ -38,4 +38,4 @@ end architecture dataflow;
 
 2. Link to your public EDA Playground example:
 
-   [https://www.edaplayground.com/...](https://www.edaplayground.com/...)
+   [https://www.edaplayground.com/x/fUHx](https://www.edaplayground.com/x/fUHx)
