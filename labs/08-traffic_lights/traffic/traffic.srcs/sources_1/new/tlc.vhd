@@ -33,7 +33,8 @@ entity tlc is
     clk   : in    std_logic;                    --! Main clock
     rst   : in    std_logic;                    --! High-active synchronous reset
     south : out   std_logic_vector(2 downto 0); --! Traffic light for "south" direction
-    west  : out   std_logic_vector(2 downto 0)  --! Traffic light for "west" direction
+    west  : out   std_logic_vector(2 downto 0);  --! Traffic light for "west" direction
+    cnt   : out   std_logic_vector(4 downto 0)
   );
 end entity tlc;
 
@@ -110,6 +111,8 @@ begin
         -- Every 250 ms, CASE checks the value of sig_state
         -- local signal and changes to the next state 
         -- according to the delay value.
+        cnt <= std_logic_vector(sig_cnt);
+        
         case sig_state is
 
           when WEST_STOP =>

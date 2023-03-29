@@ -39,14 +39,26 @@ entity top is
            LED17_R : out STD_LOGIC;
            LED17_G : out STD_LOGIC;
            LED17_B : out STD_LOGIC;
-           BTNC : in STD_LOGIC);
+           -- 7 segments
+           --CA : out STD_LOGIC;
+           --CB : out STD_LOGIC;
+           --CC : out STD_LOGIC;
+           --CD : out STD_LOGIC;
+           --CE : out STD_LOGIC;
+           --CF : out STD_LOGIC;
+           --CG : out STD_LOGIC;
+           --AN : out STD_LOGIC_VECTOR (7 downto 0);
+           -- LED counter
+           LED  : out std_logic_vector(4 downto 0);
+           BTNR : in STD_LOGIC;  -- west speed button
+           BTNC : in STD_LOGIC); -- reset button
 end top;
 
 ----------------------------------------------------------
 -- Architecture body for top level
 ----------------------------------------------------------
 architecture behavioral of top is
-
+    
 begin
     ------------------------------------------------------
     -- Instance (copy) of tlc entity
@@ -60,7 +72,8 @@ begin
             south(0) => LED16_B,
             west(2) => LED17_R,
             west(1) => LED17_G,
-            west(0) => LED17_B
+            west(0) => LED17_B,
+            cnt => LED
         );
 
 end architecture behavioral;
