@@ -9,4 +9,4 @@ Learning from [Digital electronics repository](https://github.com/tomas-fryza/di
 * 05 [FFS](labs/05-ffs) :white_check_mark:
 * 06 [Counter](labs//06-counter) :white_check_mark:
 * 07 [Display driver](labs/07-display_driver) :x:
-* 08 [Traffic lights](labs/08-traffic_lights) :x:
+* 08 [Traffic lights](labs/08-traffic_lights) :white_check_mark:
